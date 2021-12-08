@@ -4,48 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checklist</title>
+    <title>To-do list</title>
     <style type="text/css">
       div {
         height: 100px;
         /* border: solid 1px; */
-        padding: 10px 0px 0px 0px;
+        /* padding: 10px 0px 0px 0px; */
+      }
+      .main{
+        height:700px;
+        width: 800px;
+        background-color: rgba(233, 204, 165, 0.795);
+        border: solid 10px blue;
+        border-radius: 10px;
+        margin:100px;
+        overflow: scroll;
+      }
+      .heading{
+        height: fit-content;
+        text-align: center;
+        font-size: 50px;
+        margin-top: 50px;
       }
       .container {
-        width: 500px;
+        width: 600px;
         margin-left: 150px;
         margin-top: 8%;
       }
       .item {
-        height: 50px;
-        width: 60%;
+        height: 30px;
+        width: 50%;
         padding: 5px;
-        border-radius: 5px;
-        border: solid   2px burlywood;
-
+        border-radius: 30px ;
+        border: solid 5px rgba(0, 0, 0, 0.63);
+        font-size: 20px;
+      }
+      
+      .item:hover{
+        border: rgba(9, 60, 230, 0.87) solid  5px;
+        /* font-size: 25px; */
       }
       .btn {
-        margin-left: 25px;
+        /* margin-left: 25px; */
         height: 50px;
         width: 20%;
         border-radius: 15px;
         font-weight: 900;
-        border: solid   1px;
+        border: solid   2px white;
+        background-color: rgba(0, 0, 0, 0.425);
+        color: white;
+      }
+      .btn:hover{
+        background-color: rgba(2, 2, 2, 0.137);
+        color: black;
+      }
+      .deletebtn:hover{
+        color: red;
+
       }
       .tasks{
-          margin: 50px 50px 0px 100px ;
-          padding: 50px;
+        font-size: 25px;
+          margin: 10px 50px 0px 100px ;
+          padding: 0px 50px 50px 50px;
           width: 500px;
           height: max-content;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <input type="text" class="item" placeholder="Task....." />
-      <button class="btn">ADD TASK</button>
+    <div class="main">
+      <div class="heading">TO-DO Tasks</div>
+
+      <div class="container">
+        <input type="text" class="item" placeholder="Task....." />
+        <button class="btn">ADD TASK</button>
+        <button class=" btn deletebtn ">DELETE ALL</button>
+      </div>
+      <div class="tasks"></div>
     </div>
-    <div class="tasks"></div>
 <!-- javascript -->
 <script type="text/javascript"  src="index.js"></script>
   </body>
